@@ -14,6 +14,7 @@ public abstract class BaseEntity implements Serializable {
     @DatabaseField( generatedId = true )
     Long id;
 
+
     public Long getId()
     {
         return id;

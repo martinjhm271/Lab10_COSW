@@ -1,14 +1,15 @@
 package co.edu.pdam.eci.persistenceapiintegration.ui.activity;
 
+import android.app.ProgressDialog;
+import android.os.Handler;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import java.io.IOException;
+
 import java.util.List;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -26,10 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     Model ormModel;
+    ProgressDialog progressDialog;
+    int progressBarStatus = 0;
+    Handler progressBarbHandler = new Handler();
 
     @Override
-    protected void onCreate( Bundle savedInstanceState )
-    {
+    protected void onCreate( Bundle savedInstanceState ) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
 
@@ -39,20 +42,37 @@ public class MainActivity extends AppCompatActivity {
         ormModel = new OrmModel();
         ormModel.init(this);
 
-        Team team1 = new Team("Manchester United","Manchestes","http://www.manutd.com/~/media/510AE241278B45FF97125DC1E1E32CBF.ashx");
-        Team team2 = new Team("Inter De Milan","Inter","https://images-na.ssl-images-amazon.com/images/I/41L6NaxacsL._SX355_.jpg");
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setCancelable(true);
+        progressDialog.setMessage("Loading URL teams ...");
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setProgress(0);
+        progressDialog.setMax(1000);
+        progressDialog.show();
 
-        try {
+        Thread thread1 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(progressBarStatus < 100 ){
+                    try {
+                        Thread.sleep(1500);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    progressBarStatus += 10;
+                    progressBarbHandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            progressDialog.setProgress(progressBarStatus);
+                        }
+                    });
+                }
+                progressDialog.dismiss();
+            }
+        });
 
-            ormModel.getTeamDao().createOrUpdate(team1);
-            ormModel.getTeamDao().createOrUpdate(team2);
-            System.out.println("Test #1: Creating classes");
-            System.out.println(ormModel.getTeamDao().getAll());
+        thread1.start();
 
-
-        } catch (DBException e) {
-            e.printStackTrace();
-        }
 
         System.out.println("Second part");
 
@@ -83,24 +103,33 @@ public class MainActivity extends AppCompatActivity {
                 retrofitNetwork.getTeams(listReceive);
             }
         });
+
         try {
-            Thread.sleep(10000);
+            Thread.sleep(15000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+
+        Team team1 = new Team("Manchester United","Manchestes","http://www.manutd.com/~/media/510AE241278B45FF97125DC1E1E32CBF.ashx");
+        Team team2 = new Team("Inter De Milan","Inter","https://images-na.ssl-images-amazon.com/images/I/41L6NaxacsL._SX355_.jpg");
+
         try {
-            System.out.println("Test 2b: persistence DataBase");
+            ormModel.getTeamDao().createOrUpdate(team1);
+            ormModel.getTeamDao().createOrUpdate(team2);
+            System.out.println("Test #1: Creating classes");
             System.out.println(ormModel.getTeamDao().getAll());
         } catch (DBException e) {
             e.printStackTrace();
         }
 
+        System.out.println("Test 2b: persistence DataBase");
         try {
             configureRecyclerView();
-            System.out.println("Entro");
         } catch (DBException e) {
             e.printStackTrace();
         }
+
     }
 
     private void configureRecyclerView() throws DBException {
@@ -111,3 +140,4 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(new TeamsAdapter(ormModel.getTeamDao().getAll()));
     }
 }
+

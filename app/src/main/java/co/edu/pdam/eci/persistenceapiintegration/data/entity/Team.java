@@ -20,7 +20,7 @@ public class Team extends BaseEntity {
     @DatabaseField
     String imageUrl;
 
-    public Team() {}
+    public Team(){}
 
     public Team(String name, String shortName, String imageUrl) {
         this.name = name;

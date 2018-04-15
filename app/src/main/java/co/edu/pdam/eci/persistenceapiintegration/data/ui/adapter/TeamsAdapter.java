@@ -11,7 +11,9 @@ import android.widget.TextView;
 
 
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import co.edu.pdam.eci.persistenceapiintegration.R;
 import co.edu.pdam.eci.persistenceapiintegration.data.entity.Team;
@@ -23,6 +25,7 @@ import co.edu.pdam.eci.persistenceapiintegration.data.entity.Team;
 public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.ViewHolder> {
 
     List<Team> teams;
+    Map<Long,Bitmap> imgCache = new HashMap<>();
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
@@ -52,15 +55,17 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.ViewHolder> 
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.name.setText(teams.get(position).getName());
         holder.shortname.setText(teams.get(position).getShortName());
-        Bitmap image = null;
-        try{
-            System.out.println("esta es mi foto: "+teams.get(position).getImageUrl());
-            InputStream in = new java.net.URL(teams.get(position).getImageUrl()).openStream();
-            image = BitmapFactory.decodeStream(in);
-        }catch(Exception ex){
-            ex.printStackTrace();
+        if(!imgCache.containsKey(teams.get(position).getId())){
+            Bitmap image = null;
+            try{
+                InputStream in = new java.net.URL(teams.get(position).getImageUrl()).openStream();
+                image = BitmapFactory.decodeStream(in);
+            }catch(Exception ex){
+                System.out.println("Foto no encontrada!!");
+            }
+            imgCache.put(teams.get(position).getId(),image);
         }
-        holder.img.setImageBitmap(image);
+        holder.img.setImageBitmap(imgCache.get(teams.get(position).getId()));
     }
 
     @Override

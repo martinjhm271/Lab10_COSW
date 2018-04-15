@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/carlos/Music/android-persistance-api-integration/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c323c36ecc68965c4cfb460f7721113d2b61ed03">
+        <dex dex="/home/carlos/Music/android-persistance-api-integration/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_0cd984c99fdbdbcf7a4eb60920502a30f6ed07f7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/carlos/Music/android-persistance-api-integration/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e0b57611ea5a4af0c2bfc782f4ad98650f49f7df">
+        <dex dex="/home/carlos/Music/android-persistance-api-integration/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_4af2fe4b5a4cfd3ed82cbd29a69ab8171775d1d9/classes.dex" />
+    </item>
+
+</items>
