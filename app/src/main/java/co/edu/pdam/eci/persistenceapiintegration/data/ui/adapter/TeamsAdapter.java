@@ -18,9 +18,7 @@ import java.util.Map;
 import co.edu.pdam.eci.persistenceapiintegration.R;
 import co.edu.pdam.eci.persistenceapiintegration.data.entity.Team;
 
-/**
- * Created by carlos on 13/04/18.
- */
+
 
 public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.ViewHolder> {
 

@@ -3,21 +3,210 @@
 
     <item
         is-multidex="true"
-        jar="/home/carlos/Music/android-persistance-api-integration/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c0719b523ebbec02fdca294998ad1997cb6b51c6">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_d21e8e590dc77b2b2c71d100ca7d28bc85b18c75/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/local/LABINFO/2106913/.android/build-cache/e2d342e18969204997363ef85c665efe36928ace/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c632362b2e5def98a699bfc5665eec9b2145f727/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/local/LABINFO/2106913/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.2.0/41e67dba73c3347e4503761642c39d0e06ca1f2/retrofit-2.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="041e67dba73c3347e4503761642c39d0e06ca1f2">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.2.0_2f77d46ccff5fc8e3009804d8ddb9b737b78ed0f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/local/LABINFO/2106913/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_4f5a8bfafffafcd041de2941a45771ca3bdb96b3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/usr/share/SDK/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_98593734e78e2f04a13156c145e408949b807655/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/local/LABINFO/2106913/.android/build-cache/c4b156ba1e12cdaee3cdaea88b500f357d70a499/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9f471e19a6d3330bc903c789271d33e68fbbce3a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/local/LABINFO/2106913/.gradle/caches/modules-2/files-2.1/com.j256.ormlite/ormlite-core/5.0/3382b8260646dd334a1b9c1b3d412fcb73d8b21/ormlite-core-5.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="03382b8260646dd334a1b9c1b3d412fcb73d8b21">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/ormlite-core-5.0_6273676295b42de1680d073171b796a63743e82b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/local/LABINFO/2106913/.android/build-cache/2c5f4c02b49423f16e33f899485d3337412b0885/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6e47c6a5f8b4ad5d87c4a024b8759d92f1905f0c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/local/LABINFO/2106913/.android/build-cache/9158c3898fcd2f5af0a2e7a70e7250e7a2a7fc02/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c28774216ff391b342e8621f79497f82c64b61ef/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/local/LABINFO/2106913/.android/build-cache/d3b4f4bf177d989a7c1f6642a2cb8f41a657ca71/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a213af1b9e2272c1fd1c6360eb082180cecd1ff1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/local/LABINFO/2106913/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.1.0_fcc72b4fb39a19d8de4799d9139a6f04cff47751/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/local/LABINFO/2106913/.gradle/caches/modules-2/files-2.1/com.j256.ormlite/ormlite-android/5.0/1f065373aeef355dd9e2fd9854efd5ed4d54f6d/ormlite-android-5.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="01f065373aeef355dd9e2fd9854efd5ed4d54f6d">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/ormlite-android-5.0_ba15932d8b4185905fee46796f52ff579e912f45/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/local/LABINFO/2106913/.android/build-cache/1a8eb48c30117b540776e060d8f25545f4ab103e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_cee32a44886af89cae66b9f7840dc840237ae6de/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/local/LABINFO/2106913/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.6.0_b99d753835a7b233a5ff99dd653e37164a782e9d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/local/LABINFO/2106913/.android/build-cache/5604332487652d0a3bc889d7c4e4d6fe6784b9d2/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_58ef9ddf8c852945bda9b9a7fa49d16d7cee9db5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="c323c36ecc68965c4cfb460f7721113d2b61ed03">
-        <dex dex="/home/carlos/Music/android-persistance-api-integration/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_0cd984c99fdbdbcf7a4eb60920502a30f6ed07f7/classes.dex" />
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_1cc04e5652b7d85cf3c423020065a2f84f40a505/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/carlos/Music/android-persistance-api-integration/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/home/local/LABINFO/2106913/.android/build-cache/4a13c2cde264b5423e3f9bc6ed4904796c7f9c28/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="e0b57611ea5a4af0c2bfc782f4ad98650f49f7df">
-        <dex dex="/home/carlos/Music/android-persistance-api-integration/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_4af2fe4b5a4cfd3ed82cbd29a69ab8171775d1d9/classes.dex" />
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_623e0ee3f75abf73614b4732eb2d07a227d4d61d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/local/LABINFO/2106913/.android/build-cache/ba73cdd3ce8e53d5f124b07a08e92cf8630f0c1c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f3b07cd850f0c06954c8c638d0ce74640865fc20/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/local/LABINFO/2106913/.android/build-cache/e035b7e2cb3b5a2e095c39e7931250d277b8ad6a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f8fede9db7b70530e4f455aa96d0b778db583ec1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/local/LABINFO/2106913/.android/build-cache/5e57f1cb19ef241b40aa1f1102c3d9c4c899cb13/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9aea8a03b0b805b03a0be1364a9a76494193da2e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/local/LABINFO/2106913/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.11.0/840897fcd7223a8143f1d9b6f69714e7be34fd50/okio-1.11.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.11.0_c9a73e0c939b7a286816e8f6c5f8a7b0ea4eb3aa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/usr/share/SDK/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.1_70813317702a23ca48d5a4fae0d2899af319d488/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/local/LABINFO/2106913/.android/build-cache/ece1e4a54a412feb1e76e8464eadcbc8323a6ff9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/local/LABINFO/2106913/Documents/Lab10-Persistence/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6bc3bd3bc6e8281d42a465a4a80ab5058d8203db/classes.dex" />
     </item>
 
 </items>

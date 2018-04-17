@@ -5,25 +5,25 @@ import java.util.List;
 
 import co.edu.pdam.eci.persistenceapiintegration.data.Service.TeamsService;
 import co.edu.pdam.eci.persistenceapiintegration.data.entity.Team;
+import co.edu.pdam.eci.persistenceapiintegration.ui.activity.MainActivity;
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Created by carlos on 13/04/18.
- */
+
 
 public class RetrofitNetwork {
 
     private static final String BASE_URL = "https://raw.githubusercontent.com/sancarbar/starting-android-lists/master/";
 
     private TeamsService teamsService;
+    public MainActivity m;
 
-    public RetrofitNetwork() {
-        Retrofit retrofit =
-                new Retrofit.Builder().baseUrl( BASE_URL ).addConverterFactory( GsonConverterFactory.create() ).build();
+    public RetrofitNetwork(MainActivity m) {
+        Retrofit retrofit = new Retrofit.Builder().baseUrl( BASE_URL ).addConverterFactory( GsonConverterFactory.create() ).build();
         teamsService = retrofit.create( TeamsService.class );
+        this.m=m;
     }
 
     public void getTeams( RequestCallback<List<Team>> requestCallback ) {

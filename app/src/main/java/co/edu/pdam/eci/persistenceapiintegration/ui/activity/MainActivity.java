@@ -25,11 +25,13 @@ import co.edu.pdam.eci.persistenceapiintegration.data.ui.adapter.TeamsAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
+    boolean ans=false;
     RecyclerView recyclerView;
     Model ormModel;
     ProgressDialog progressDialog;
     int progressBarStatus = 0;
     Handler progressBarbHandler = new Handler();
+    MainActivity m=this;
 
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
@@ -50,28 +52,7 @@ public class MainActivity extends AppCompatActivity {
         progressDialog.setMax(1000);
         progressDialog.show();
 
-        Thread thread1 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while(progressBarStatus < 100 ){
-                    try {
-                        Thread.sleep(1500);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    progressBarStatus += 10;
-                    progressBarbHandler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            progressDialog.setProgress(progressBarStatus);
-                        }
-                    });
-                }
-                progressDialog.dismiss();
-            }
-        });
 
-        thread1.start();
 
 
         System.out.println("Second part");
@@ -80,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         executorService.execute(new Runnable() {
             @Override
             public void run() {
-                RetrofitNetwork retrofitNetwork = new RetrofitNetwork();
+                final RetrofitNetwork retrofitNetwork = new RetrofitNetwork(m);
                 RequestCallback<List<Team>> listReceive = new RequestCallback<List<Team>>() {
                     @Override
                     public void onSuccess(List<Team> response) {
@@ -93,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
                                 e.printStackTrace();
                             }
                         }
+                        progressDialog.dismiss();
+
                     }
 
                     @Override
@@ -109,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
 
 
         Team team1 = new Team("Manchester United","Manchestes","http://www.manutd.com/~/media/510AE241278B45FF97125DC1E1E32CBF.ashx");
