@@ -55,8 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        System.out.println("Second part");
-
         ExecutorService executorService = Executors.newFixedThreadPool(1);
         executorService.execute(new Runnable() {
             @Override
@@ -65,19 +63,25 @@ public class MainActivity extends AppCompatActivity {
                 RequestCallback<List<Team>> listReceive = new RequestCallback<List<Team>>() {
                     @Override
                     public void onSuccess(List<Team> response) {
-                        System.out.println("Test #2a: generated Response");
-                        System.out.println(response);
-                        for(Team team : response){
-                            try {
+                        try{
+                            for(Team team : response){
                                 ormModel.getTeamDao().createOrUpdate(team);
-                            } catch (DBException e) {
-                                e.printStackTrace();
                             }
-                        }
-                        progressDialog.dismiss();
+                        }catch (Exception e){}
+
+                        runOnUiThread(new Runnable(){
+                            @Override
+                            public void run(){
+                                try {
+                                    loadTeams();
+                                } catch (DBException e) {
+                                    e.printStackTrace();
+                                }
+                                progressDialog.dismiss();
+                            }
+                        });
 
                     }
-
                     @Override
                     public void onFailed(NetworkException e) {
                         System.out.println(e.getMessage());
@@ -87,11 +91,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        try {
-            Thread.sleep(15000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
 
 
 
@@ -121,6 +121,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize( true );
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager( this );
         recyclerView.setLayoutManager( layoutManager );
+        loadTeams();
+    }
+
+    private void loadTeams() throws DBException {
         recyclerView.setAdapter(new TeamsAdapter(ormModel.getTeamDao().getAll()));
     }
 }

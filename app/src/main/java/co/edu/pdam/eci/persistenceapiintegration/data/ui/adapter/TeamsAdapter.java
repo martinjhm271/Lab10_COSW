@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.squareup.picasso.Picasso;
+
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
@@ -23,7 +25,7 @@ import co.edu.pdam.eci.persistenceapiintegration.data.entity.Team;
 public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.ViewHolder> {
 
     List<Team> teams;
-    Map<Long,Bitmap> imgCache = new HashMap<>();
+
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
@@ -53,7 +55,6 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.ViewHolder> 
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.name.setText(teams.get(position).getName());
         holder.shortname.setText(teams.get(position).getShortName());
-        if(!imgCache.containsKey(teams.get(position).getId())){
             Bitmap image = null;
             try{
                 InputStream in = new java.net.URL(teams.get(position).getImageUrl()).openStream();
@@ -61,9 +62,8 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.ViewHolder> 
             }catch(Exception ex){
                 System.out.println("Foto no encontrada!!");
             }
-            imgCache.put(teams.get(position).getId(),image);
-        }
-        holder.img.setImageBitmap(imgCache.get(teams.get(position).getId()));
+
+        Picasso.get().load(teams.get(position).getImageUrl()).into(holder.img);
     }
 
     @Override
